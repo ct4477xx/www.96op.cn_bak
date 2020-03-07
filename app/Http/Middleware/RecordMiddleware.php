@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class LoginMiddleware
+class RecordMiddleware
 {
     /**
      * Handle an incoming request.
@@ -15,10 +15,11 @@ class LoginMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(session('id')){
-            return $next($request);
-        }else{
-            return redirect('/login');
-        }
+
+        //记录请求    request.log
+        $path = $request->ip().'-'.$request->get('name');
+
+        file_put_contents('./request.log',$path."\r\n",FILE_APPEND);
+        return $next($request);
     }
 }

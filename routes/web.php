@@ -15,7 +15,7 @@ Route::get('/login',function(){
     return 'login page';
 });
 //前台
-Route::group(['middleware'=>"login"],function(){
+Route::group([],function(){
 
 	Route::get('/',function(){
 		return view('welcome');
@@ -23,15 +23,19 @@ Route::group(['middleware'=>"login"],function(){
 
 	Route::get('/admin',function(){
 		return '这是一个牛逼胡后台';
-	})->name('ht');
+	})->name('ht')->middleware('login');
 
 	Route::get('/home',function(){
 		return '<a href='.route('ht').'>后台</a>';
 	});
 
-	Route::get('/user/{id}',function($id){
-		return '用户id是：'.$id;
-	})->where('id','\d+');
+	Route::get('/update',function(){
+        echo 'update';
+    })->middleware('login');
+
+	Route::get('/delete',function(){
+        echo 'delete';
+    })->middleware('login');
 
 	Route::get('/404}',function(){
 		if(empty($_GET['id'])){
@@ -43,8 +47,18 @@ Route::group(['middleware'=>"login"],function(){
 
 
 //后台
-//Route::group([],function(){
-//	Route::get('/aa'function(){
-//		return 'aa';
-//	});
-//});
+Route::get('/user/add','UserController@add');
+Route::post('/user/insert','UserController@insert');
+
+
+//Api
+Route::get('/user/{id}','UserController@show')->name('user.show')->where('id','\d+');
+Route::get('/user/index','UserController@index')->middleware('login');
+
+
+//资源控制器
+Route::resource('tiezi','TieziController');
+Route::post('/upload','TieziController@upload');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
