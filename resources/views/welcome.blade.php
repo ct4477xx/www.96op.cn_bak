@@ -64,6 +64,7 @@
             }
         </style>
     </head>
+
     <body>
         <div class="flex-center position-ref full-height">
 
@@ -71,6 +72,9 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
+
+                <?php  if(\Session::has('name')) : ?>
+                <?php endif ?>
 
                 <div class="links">
                     <a href="/home">首页</a>

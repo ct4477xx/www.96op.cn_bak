@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -24,5 +24,15 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+
+    public function set(){
+        \Cookie::queue('name','join',1);
+        return redirect('/get');
+    }
+
+    public function get(){
+        echo \Cookie::get('name');
     }
 }

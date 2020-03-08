@@ -62,3 +62,9 @@ Route::post('/upload','TieziController@upload');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/set','HomeController@set');
+Route::get('/get','HomeController@get');
+
+
+
+Route::get('/select','DBController@select');
