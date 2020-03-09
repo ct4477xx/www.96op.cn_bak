@@ -68,3 +68,6 @@ Route::get('/get','HomeController@get');
 
 
 Route::get('/select','DBController@select');
+
+
+Route::get('/model','DBController@model');
