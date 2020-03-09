@@ -65,9 +65,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/set','HomeController@set');
 Route::get('/get','HomeController@get');
 
-
-
 Route::get('/select','DBController@select');
-
-
 Route::get('/model','DBController@model');
