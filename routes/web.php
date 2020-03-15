@@ -14,3 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+
+Route::get('sys','SysController@show');
+Route::post('sys/login','SysController@login');
+
+
+
+Route::get('phpinfo',function(){
+    return view('phpinfo');
+});
+
+Route::resource('test','TestController');
+
+
+
+

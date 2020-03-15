@@ -8,7 +8,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -103,7 +103,17 @@
   <component name="ProjectId" id="1Z3ZuyrvYjQHvUq9jYKXGqJdia4" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/Test" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wwwroot\www.96op.cn\resources\views\Test" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wwwroot\www.96op.cn\resources\views\sys\temp" />
+      <recent name="D:\wwwroot\www.96op.cn\resources\views\sys" />
+      <recent name="D:\wwwroot\www.96op.cn\resources\views\public" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -144,6 +154,18 @@
       <option name="presentableId" value="Default" />
       <updated>1584069965038</updated>
       <workItem from="1584069966309" duration="78000" />
+      <workItem from="1584075059026" duration="955000" />
+      <workItem from="1584079833285" duration="31000" />
+      <workItem from="1584079931739" duration="28000" />
+      <workItem from="1584080050958" duration="23000" />
+      <workItem from="1584080119306" duration="1322000" />
+      <workItem from="1584101853395" duration="1503000" />
+      <workItem from="1584103437263" duration="2385000" />
+      <workItem from="1584105853289" duration="19000" />
+      <workItem from="1584105909725" duration="213000" />
+      <workItem from="1584157370926" duration="1828000" />
+      <workItem from="1584194059094" duration="25598000" />
+      <workItem from="1584276631769" duration="5772000" />
     </task>
     <servers />
   </component>
