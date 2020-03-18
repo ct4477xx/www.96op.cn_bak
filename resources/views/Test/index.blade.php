@@ -36,14 +36,15 @@
 <script>
     function del_ete(obj, id) {
         layer.confirm('确认要删除吗?', function (index) {
-            $.post('test/' + id, {'_method': 'delete', '_token': '{{csrf_token()}}'}, function (data) {
-                if (data.success == 0) {
-                    $(obj).parents('tr').remove();
-                    layer.msg(data.msg, {icon: 6, time: 1000});
-                } else {
-                    layer.msg(data.msg, {icon: 5, time: 1000});
-                }
-            })
+            $.post('test/' + id, {'_method': 'delete', '_token': '{{csrf_token()}}'},
+                function (data) {
+                    if (data.success == 0) {
+                        $(obj).parents('tr').remove();
+                        layer.msg(data.msg, {icon: 6, time: 1000});
+                    } else {
+                        layer.msg(data.msg, {icon: 5, time: 1000});
+                    }
+                })
         })
     }
 </script>
